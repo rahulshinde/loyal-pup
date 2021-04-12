@@ -1,0 +1,125 @@
+@keyframes cloud {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-120vw); } 
+}
+
+@-webkit-keyframes cloud {
+  0%   {transform: translateX(0); }
+  100% {transform: translateX(-120vw); } 
+}
+
+@font-face{
+	font-family: 'Comic Neue';
+	src: url('../fonts/ComicNeue-Bold.otf') format('otf');
+}
+
+html{
+	font-size: 2.5vw;
+}
+
+body{
+	margin: 0 0.5rem;
+	font-family: 'Comic Neue', sans-serif;
+	font-weight: 800;
+	color: #00cc2f;
+	text-shadow: 0.05rem 0.05rem 0 #212667;
+}
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+
+.about_section{
+	display: flex;
+	align-items: center;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	text-align: center;
+	font-size: 2rem;
+	min-height: calc(100vh - 4rem);
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	box-sizing: border-box;
+}
+
+.info_section{
+	width: calc(50% - 1rem);
+	margin-bottom: 4rem;
+	text-align: center;
+}
+
+h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#background_container img{
+	position: fixed;
+}
+
+#logo{
+	bottom: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 3rem;
+	z-index: 4;
+}
+
+#grass{
+	position: fixed;
+	background-color: #00cc30;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	height: 4rem;
+	width: 100%;
+}
+
+#tree{
+	width: 7rem;
+  bottom: 4rem;
+  right: 4rem;
+}
+
+#sun{
+	width: 7rem;
+  top: 1rem;
+  left: 1rem;
+}
+
+#cloud1, #cloud2, #cloud3{
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+#cloud1 {
+	right: -8rem;
+	width: 8rem;
+  top: 5vh;
+  animation: cloud 20s linear 0s infinite;
+  -webkit-animation: cloud 20s linear 0s infinite;
+}
+
+#cloud2{
+	right: -6rem;
+	width: 6rem;
+	top: 25vh;
+  animation: cloud 20s linear 8s infinite;
+  -webkit-animation: cloud 20s linear 8s infinite;
+  z-index: -12;
+}
+
+#cloud3{
+	right: -4rem;
+	width: 4rem;
+	top: 10vh;
+  animation: cloud 20s linear 5s infinite;
+  -webkit-animation: cloud 20s linear 5s infinite;
+  z-index: -12;
+}
