@@ -23,7 +23,7 @@
 
 @font-face{
 	font-family: 'Comic Neue';
-	src: url('../fonts/ComicNeue-Bold.otf') format('otf');
+	src: url('../fonts/ComicNeue_Bold.otf') format('otf');
 }
 
 html{
@@ -591,5 +591,5 @@ h1{
 }
 
 @media (max-width: 1100px){
-	
+
 }
