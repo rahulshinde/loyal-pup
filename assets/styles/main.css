@@ -1,11 +1,24 @@
-@keyframes cloud {
+@keyframes dog_cloud {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-120vw); } 
 }
 
-@-webkit-keyframes cloud {
+@-webkit-keyframes dog_cloud {
   0%   {transform: translateX(0); }
   100% {transform: translateX(-120vw); } 
+}
+
+@keyframes sun {
+  0%   {opacity: 1; }
+  50% {opacity: 1; }
+  50.1% {opacity: 0; }
+  100%   {opacity: 0; }
+}
+
+:root {
+	--margin: 2rem;
+	--small-font-size: 1.2rem;
+	--large-font-size: 1.6rem;
 }
 
 @font-face{
@@ -14,15 +27,32 @@
 }
 
 html{
-	font-size: 2.5vw;
+	font-size: 1.25vw;
+	background-color: #84bbff;
 }
 
 body{
 	margin: 0 0.5rem;
 	font-family: 'Comic Neue', sans-serif;
+	line-height: 1.3;
 	font-weight: 800;
-	color: #00cc2f;
-	text-shadow: 0.05rem 0.05rem 0 #212667;
+	color: #212667;
+	margin-bottom: 4rem;
+	/*text-shadow*/: 0.05rem 0.05rem 0 #212667;
+}
+
+body:after{
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+a{
+	color: #212667;
 }
 
 main{
@@ -37,24 +67,71 @@ main{
 .about_section{
 	display: flex;
 	align-items: center;
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
+	flex-wrap: wrap;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+	font-size: var(--small-font-size);
 	text-align: center;
-	font-size: 2rem;
-	min-height: calc(100vh - 4rem);
-	padding-top: 10vh;
-	padding-bottom: 10vh;
 	box-sizing: border-box;
+}
+
+.about_section p{
+	width: 100%;
+	text-align: center;
+}
+
+#mc_embed_signup{
+	margin: 0 auto;
+}
+
+input{
+	font-family: 'Comic Neue', sans-serif;
+	color: #212667;
+	background-color: transparent;
+	outline: none;
+	border: 0;
+	font-size: var(--small-font-size);
+	font-weight: 800;
+	/*text-shadow*/: 0.05rem 0.05rem 0 #212667;
+}
+
+input{
+	border-bottom: 3px solid;
+}
+
+input[type='submit']{
+	background-color: #ff9100;
+}
+
+#mc-embedded-subscribe{
+	border: 3px solid;
+}
+
+#mc_embed_signup_scroll{
+	display: flex;
+	align-items: center;
+	width: 100%;
 }
 
 .info_section{
 	width: calc(50% - 1rem);
-	margin-bottom: 4rem;
+	padding: 0 8%;
+	font-size: var(--small-font-size);
+	box-sizing: border-box;
 	text-align: center;
 }
 
+.info_section img{
+	display: block;
+	width: 100%;
+	height: 15rem;
+	object-fit: contain;
+}
+
 h1{
-	font-size: 2rem;
+	font-size: var(--large-font-size);
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -73,7 +150,7 @@ h1{
 
 #grass{
 	position: fixed;
-	background-color: #00cc30;
+	background-color: #019803;
 	bottom: 0;
 	left: 0;
 	z-index: 3;
@@ -82,44 +159,437 @@ h1{
 }
 
 #tree{
-	width: 7rem;
-  bottom: 4rem;
-  right: 4rem;
+	display: none;
+	width: 9rem;
+  bottom: calc(var(--margin) * 2);
+  right: calc(var(--margin) * 2);
 }
 
-#sun{
-	width: 7rem;
-  top: 1rem;
-  left: 1rem;
+.sun{
+	width: 18rem;
+  top: var(--margin/2);
+  left: var(--margin);
+  transform: rotate(-20deg);
+  opacity: 0;
+  animation: sun;
+  animation-duration: 2s;
+  animation-direction: linear;
+  animation-iteration-count: infinite;
+  z-index: -15;
 }
 
-#cloud1, #cloud2, #cloud3{
+#sun2{
+	animation-delay: 1s;
+}
+
+#dog_cloud1, #dog_cloud2, #dog_cloud3{
   transform: translateX(0);
   -webkit-transform: translateX(0);
 }
 
-#cloud1 {
-	right: -8rem;
-	width: 8rem;
-  top: 5vh;
-  animation: cloud 20s linear 0s infinite;
-  -webkit-animation: cloud 20s linear 0s infinite;
+.cloud{
+	filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0,0,0,0.1));
+	opacity: 0.9rem;
+}
+
+#cloud1{
+	right: -12rem;
+	width: 12rem;
+	top: 40vh;
+	animation: dog_cloud 30s linear 4s infinite;
+  -webkit-animation: dog_cloud 30s linear 4s infinite;
 }
 
 #cloud2{
-	right: -6rem;
-	width: 6rem;
-	top: 25vh;
-  animation: cloud 20s linear 8s infinite;
-  -webkit-animation: cloud 20s linear 8s infinite;
+	right: -10rem;
+	width: 10rem;
+	top: 4vh;
+	animation: dog_cloud 41s linear 0s infinite;
+  -webkit-animation: dog_cloud 41s linear 0s infinite;
+}
+
+#dog_cloud1 {
+	right: -16rem;
+	width: 16rem;
+  top: 5vh;
+  animation: dog_cloud 50s linear 10s infinite;
+  -webkit-animation: dog_cloud 50s linear 10s infinite;
+}
+
+#dog_cloud2{
+	right: -14rem;
+	width: 14rem;
+	top: 45vh;
+  animation: dog_cloud 38s linear 8s infinite;
+  -webkit-animation: dog_cloud 38s linear 8s infinite;
   z-index: -12;
 }
 
-#cloud3{
-	right: -4rem;
-	width: 4rem;
-	top: 10vh;
-  animation: cloud 20s linear 5s infinite;
-  -webkit-animation: cloud 20s linear 5s infinite;
+#dog_cloud3{
+	right: -10rem;
+	width: 10rem;
+	top: 20vh;
+  animation: dog_cloud 45s linear 5s infinite;
+  -webkit-animation: dog_cloud 45s linear 5s infinite;
   z-index: -12;
+}
+
+
+/*DOG RUN ANIMATION*/
+
+@keyframes dog_run {
+  0%   { opacity: 0; }
+  7.9%   { opacity: 0; }
+  8% { opacity: 1; }
+  9.3% { opacity: 1; } 
+  9.4% { opacity: 0; } 
+  100% { opacity: 0; } 
+}
+
+@keyframes ball_animation {
+  0%   { opacity: 1; }
+  1.2% { opacity: 1; }
+  1.3% { opacity: 0; } 
+  100% { opacity: 0; } 
+}
+
+.dog_run_frame{
+	position: fixed;
+	height: 10vw;
+	bottom: 2.35rem;
+	z-index: 10;
+	opacity: 0;
+	pointer-events: none;
+	animation-name: dog_run;
+	animation-duration: 20s;
+	animation-direction: linear;
+	animation-iteration-count: infinite;
+}
+
+#dog_run_frame1{
+	left: -5%;
+	animation-delay: 0s;
+}
+#dog_run_frame2{
+	left: 0%;
+	animation-delay: 0.25s;
+}
+#dog_run_frame3{
+	left: 10%;
+	animation-delay: 0.5s;
+}
+#dog_run_frame4{
+	animation-delay: 0.75s;
+	left: 15%;
+}
+#dog_run_frame5{
+	left: 20%;
+	animation-delay: 1s;
+}
+#dog_run_frame6{
+	left: 25%;
+	animation-delay: 1.25s;
+}
+#dog_run_frame7{
+	left: 30%;
+	animation-delay: 1.5s;
+}
+
+#dog_run_frame8{
+	left: 35%;
+	animation-delay: 1.75s;
+}
+
+#dog_run_frame9{
+	left: 40%;
+	animation-delay: 2s;
+}
+#dog_run_frame10{
+	left: 45%;
+	animation-delay: 2.25s;
+}
+#dog_run_frame11{
+	left: 50%;
+	animation-delay: 2.5s;
+}
+
+#dog_run_frame12{
+	left: 55%;
+	animation-delay: 2.75s;
+}
+
+#dog_run_frame13{
+	left: 60%;
+	animation-delay: 3s;
+}
+
+#dog_run_frame14{
+	left: 65%;
+	animation-delay: 3.25s;
+}
+
+#dog_run_frame15{
+	left: 70%;
+	animation-delay: 3.5s;
+}
+
+#dog_run_frame16{
+	left: 75%;
+	animation-delay: 3.75s;
+}
+#dog_run_frame17{
+	left: 80%;
+	animation-delay: 4s;
+}
+#dog_run_frame18{
+	left: 85%;
+	animation-delay: 4.25s;
+}
+#dog_run_frame19{
+	left: 90%;
+	animation-delay: 4.5s;
+}
+
+#dog_run_frame20{
+	left: 95%;
+	animation-delay: 4.75s;
+}
+#dog_run_frame21{
+	left: 100%;
+	animation-delay: 5s;
+}
+#dog_run_frame22{
+	left: 105%;
+	animation-delay: 5.25s;
+}
+
+.dog_run_ball{
+	position: fixed;
+	height: 1.25vw;
+	z-index: 10;
+	opacity: 0;
+	pointer-events: none;
+	animation-name: ball_animation;
+	animation-duration: 20s;	
+	animation-direction: linear;
+	animation-iteration-count: infinite;
+}
+
+#dog_run_ball_frame0{
+	bottom: 25%;
+	left: 2%;
+}
+
+#dog_run_ball_frame1{
+	bottom: 35%;
+	left: 12%;
+	animation-delay: 0.25s;
+}
+
+#dog_run_ball_frame2{
+	bottom: 47%;
+	left: 25%;
+	animation-delay: 0.5s;	
+}
+
+#dog_run_ball_frame3{
+	bottom: 55%;
+	left: 35%;
+	animation-delay: 0.75s;
+}
+#dog_run_ball_frame4{
+	bottom: 58%;
+	left: 40%;
+	animation-delay: 1s;
+}
+#dog_run_ball_frame5{
+	bottom: 60%;
+	left: 45%;
+	animation-delay: 1.25s;
+}
+#dog_run_ball_frame6{
+	bottom: 61%;
+	left: 50%;
+	animation-delay: 1.5s;
+}
+#dog_run_ball_frame7{
+	bottom: 59%;
+	left: 55%;
+	animation-delay: 1.75s;
+}
+
+#dog_run_ball_frame8{
+	bottom: 55%;
+	left: 60%;
+	animation-delay: 2s;
+}
+
+#dog_run_ball_frame9{
+	bottom: 47%;
+	left: 65%;
+	animation-delay: 2.25s;
+}
+
+#dog_run_ball_frame10{
+	bottom: 35%;
+	left: 71%;
+	animation-delay: 2.5s;
+}
+
+#dog_run_ball_frame11{
+	bottom: 25%;
+	left: 75%;
+	animation-delay: 2.75s;
+}
+
+#dog_run_ball_frame12{
+	bottom: 4rem;
+	left: 79%;
+	animation-delay: 3s;
+}
+
+#dog_run_ball_frame13{
+	bottom: 17%;
+	left: 85%;
+	animation-delay: 3.25s;
+}
+
+#dog_run_ball_frame14{
+	bottom: 25%;
+	left: 92%;
+	animation-delay: 3.5s;
+}
+
+#dog_run_ball_frame15{
+	bottom: 28%;
+	left: 98%;
+	animation-delay: 3.75s;
+}
+
+/*DOG WALK ANIMATION*/
+
+@keyframes dog_walk {
+  0%   { opacity: 0; }
+  40%   { opacity: 0; }
+  40.1% { opacity: 1; }
+  42.6% { opacity: 1; } 
+  42.7% { opacity: 0; } 
+  100% { opacity: 0; } 
+}
+
+.dog_walk_frame{
+	position: fixed;
+	height: 11vw;
+	bottom: 1.8rem;
+	z-index: 10;
+	opacity: 0;
+	pointer-events: none;
+	animation-name: dog_walk;
+	animation-duration: 20s;
+	animation-direction: linear;
+	animation-iteration-count: infinite;
+}
+
+#dog_walk_frame0{
+	right: -10%;
+}
+
+#dog_walk_frame1{
+	right: -5%;
+	animation-delay: 0.5s;
+}
+#dog_walk_frame2{
+	right: 0%;
+	animation-delay: 1s;
+}
+#dog_walk_frame3{
+	right: 5%;
+	animation-delay: 1.5s;
+}
+
+#dog_walk_frame4{
+	right: 10%;
+	animation-delay: 2s;
+}
+
+#dog_walk_frame5{
+	right: 15%;
+	animation-delay: 2.5s;
+}
+
+#dog_walk_frame6{
+	right: 20%;
+	animation-delay: 3s;
+}
+
+#dog_walk_frame7{
+	right: 25%;
+	animation-delay: 3.5s;
+}
+
+#dog_walk_frame8{
+	right: 30%;
+	animation-delay: 4s;
+}
+
+#dog_walk_frame9{
+	right: 35%;
+	animation-delay: 4.5s;
+}
+#dog_walk_frame10{
+	right: 40%;
+	animation-delay: 5s;
+}
+
+#dog_walk_frame11{
+	right: 45%;
+	animation-delay: 5.5s;
+}
+#dog_walk_frame12{
+	right: 50%;
+	animation-delay: 6s;
+}
+#dog_walk_frame13{
+	right: 55%;
+	animation-delay: 6.5s;
+}
+#dog_walk_frame14{
+	right: 60%;
+	animation-delay: 7s;
+}
+#dog_walk_frame15{
+	right: 65%;
+	animation-delay: 7.5s;
+}
+#dog_walk_frame16{
+	right: 70%;
+	animation-delay: 8s;
+}
+#dog_walk_frame17{
+	right: 75%;
+	animation-delay: 8.5s;
+}
+#dog_walk_frame18{
+	right: 80%;
+	animation-delay: 9s;
+}
+#dog_walk_frame19{
+	right: 85%;
+	animation-delay: 9.5s;
+}
+#dog_walk_frame20{
+	right: 90%;
+	animation-delay: 10s;
+}
+#dog_walk_frame21{
+	right: 95%;
+	animation-delay: 10.5s;
+}
+#dog_walk_frame22{
+	right: 100%;
+	animation-delay: 11s;
+}
+
+@media (max-width: 1100px){
+	
 }
