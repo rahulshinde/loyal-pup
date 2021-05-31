@@ -130,7 +130,7 @@ input[type='submit']{
 }
 
 #mc_embed_signup input.mce_inline_error{
-	border-color: #ffb8cc;
+	border-color: #ffb8cc !important;
 }
 
 .info_section{
@@ -609,5 +609,7 @@ h1{
 }
 
 @media (max-width: 1100px){
+	.info_section{
 
+	}
 }
