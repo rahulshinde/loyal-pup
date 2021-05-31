@@ -94,11 +94,10 @@ input{
 	border: 0;
 	font-size: var(--small-font-size);
 	font-weight: 800;
-	/*text-shadow*/: 0.05rem 0.05rem 0 #212667;
-}
-
-input{
-	border-bottom: 3px solid;
+	appearance: none;
+	-webkit-appearance: none;
+	border-bottom: 0.1rem solid;
+	border-radius: 0;
 }
 
 input[type='submit']{
@@ -106,7 +105,7 @@ input[type='submit']{
 }
 
 #mc-embedded-subscribe{
-	border: 3px solid;
+	border: 0.1rem solid;
 }
 
 #mc_embed_signup_scroll{
@@ -629,5 +628,56 @@ h1{
 		padding: 0;
 		margin-left: 20%;
 		margin-right: 20%;
+	}
+}
+
+@media (max-width: 400px){
+
+	html{
+		font-size: 4vw;
+	}
+	.info_section,
+	.about_section{
+		width: auto;
+		padding: 0;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+	.mc-field-group{
+		display: flex;
+	}
+	.sun{
+		width: 10rem;
+		height: 24vh;
+	}
+
+	#cloud1{
+		right: -5rem;
+		width: 5rem;
+		
+	}
+
+	#cloud2{
+		right: -3rem;
+		width: 3rem;
+	}
+
+	#dog_cloud1 {
+		right: -10rem;
+		width: 10rem;
+	}
+
+	#dog_cloud2{
+		right: -8rem;
+		width: 8rem;
+	}
+
+	#dog_cloud3{
+		right: -4rem;
+		width: 4rem;
+		top: 20vh;
+	  animation: dog_cloud 45s linear 5s infinite;
+	  -webkit-animation: dog_cloud 45s linear 5s infinite;
+	  z-index: -12;
 	}
 }
