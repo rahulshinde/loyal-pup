@@ -113,6 +113,7 @@ input[type='submit']{
 	display: flex;
 	align-items: stretch;
 	width: 100%;
+	position: relative;
 }
 
 #mce-EMAIL{
@@ -120,8 +121,7 @@ input[type='submit']{
 	box-sizing: border-box;
 }
 
-#mc_embed_signup div.mce_inline_error,
-#mce-responses{
+#mc_embed_signup div.mce_inline_error{
 	position: absolute;
 	margin-top: 1rem !important;
 	margin-left: 4rem !important;
@@ -133,7 +133,7 @@ input[type='submit']{
 #mce-responses{
 	position: absolute;
 	margin-top: 2rem !important;
-	width: 15rem;
+	width: 100%;
 	color: #293374 !important;
 }
 
