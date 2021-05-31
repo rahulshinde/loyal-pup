@@ -185,6 +185,9 @@ h1{
 
 .sun{
 	width: 18rem;
+	height: 40vh;
+	object-fit: contain;
+	object-position: top left;
   top: var(--margin/2);
   left: var(--margin);
   transform: rotate(-20deg);
@@ -211,32 +214,32 @@ h1{
 }
 
 #cloud1{
-	right: -12rem;
-	width: 12rem;
+	right: -24vh;
+	width: 24vh;
 	top: 40vh;
 	animation: dog_cloud 30s linear 4s infinite;
   -webkit-animation: dog_cloud 30s linear 4s infinite;
 }
 
 #cloud2{
-	right: -10rem;
-	width: 10rem;
+	right: -20vh;
+	width: 20vh;
 	top: 4vh;
 	animation: dog_cloud 41s linear 0s infinite;
   -webkit-animation: dog_cloud 41s linear 0s infinite;
 }
 
 #dog_cloud1 {
-	right: -16rem;
-	width: 16rem;
+	right: -32vh;
+	width: 32vh;
   top: 5vh;
   animation: dog_cloud 50s linear 10s infinite;
   -webkit-animation: dog_cloud 50s linear 10s infinite;
 }
 
 #dog_cloud2{
-	right: -14rem;
-	width: 14rem;
+	right: -28vh;
+	width: 28vh;
 	top: 45vh;
   animation: dog_cloud 38s linear 8s infinite;
   -webkit-animation: dog_cloud 38s linear 8s infinite;
@@ -244,8 +247,8 @@ h1{
 }
 
 #dog_cloud3{
-	right: -10rem;
-	width: 10rem;
+	right: -20vh;
+	width: 20vh;
 	top: 20vh;
   animation: dog_cloud 45s linear 5s infinite;
   -webkit-animation: dog_cloud 45s linear 5s infinite;
@@ -609,7 +612,14 @@ h1{
 }
 
 @media (max-width: 1100px){
-	.info_section{
-
+	html{
+		font-size: 1.9vw;
+	}
+	.info_section,
+	.about_section{
+		width: auto;
+		padding: 0;
+		margin-left: 20%;
+		margin-right: 20%;
 	}
 }
