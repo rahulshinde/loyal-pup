@@ -23,7 +23,7 @@
 
 @font-face{
 	font-family: 'Comic Neue';
-	src: url('../fonts/ComicNeue_Bold.otf') format('otf');
+	src: url('../fonts/ComicNeue_Bold.otf') format("opentype");
 }
 
 html{
@@ -113,6 +113,19 @@ input[type='submit']{
 	display: flex;
 	align-items: center;
 	width: 100%;
+}
+
+#mce_inline_error{
+	position: absolute;
+	margin-top: 1rem;
+	margin-left: 4rem;
+	background: #ffb8cc;
+	color: #293374;
+	border-radius: 0.8rem;
+}
+
+#mc_embed_signup input.mce_inline_error{
+	border-color: #ffb8cc;
 }
 
 .info_section{
