@@ -117,6 +117,7 @@ input[type='submit']{
 
 #mce-EMAIL{
 	height: 100%;
+	box-sizing: border-box;
 }
 
 #mce_inline_error{
