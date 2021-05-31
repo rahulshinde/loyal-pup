@@ -111,8 +111,12 @@ input[type='submit']{
 
 #mc_embed_signup_scroll{
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	width: 100%;
+}
+
+#mce-EMAIL{
+	height: 100%;
 }
 
 #mce_inline_error{
