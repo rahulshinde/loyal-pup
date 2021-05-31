@@ -120,7 +120,7 @@ input[type='submit']{
 	box-sizing: border-box;
 }
 
-#mce_inline_error{
+#mc_embed_signup div.mce_inline_error{
 	position: absolute;
 	margin-top: 1rem;
 	margin-left: 4rem;
