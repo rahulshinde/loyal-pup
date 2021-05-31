@@ -122,10 +122,10 @@ input[type='submit']{
 
 #mc_embed_signup div.mce_inline_error{
 	position: absolute;
-	margin-top: 1rem;
-	margin-left: 4rem;
-	background: #ffb8cc;
-	color: #293374;
+	margin-top: 1rem !important;
+	margin-left: 4rem !important;
+	background-color: #ffb8cc !important;
+	color: #293374 !important;
 	border-radius: 0.8rem;
 }
 
