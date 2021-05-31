@@ -133,19 +133,10 @@ input[type='submit']{
 #mce-responses{
 	position: absolute;
 	margin-top: 2rem !important;
-	margin-left: 4rem !important;
-	border-radius: 0.8rem;
 	width: 15rem;
-	padding: 0.2rem;
-}
-#mce-success-response{
-	background-color: #00ff00 !important;
 	color: #293374 !important;
 }
-#mce-responses{
-	background-color: #ffb8cc !important;
-	color: #293374 !important;
-}
+
 #mc_embed_signup input.mce_inline_error{
 	border-color: #ffb8cc !important;
 }
