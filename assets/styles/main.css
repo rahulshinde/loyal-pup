@@ -656,6 +656,8 @@ h1{
 		display: flex;
 	}
 	.sun{
+		top: 0.1rem;
+		left: 1rem;
 		width: 10rem;
 		height: 24vh;
 	}
