@@ -634,6 +634,18 @@ h1{
 
 @media (max-width: 400px){
 
+	.dog_run_frame{
+		height: 17vw;
+	}
+
+	.dog_walk_frame{
+		height: 18vw;
+	}
+
+	.dog_run_ball{
+		height: 3vw;
+	}
+
 	html{
 		font-size: 16px;
 	}
@@ -705,5 +717,12 @@ h1{
 	  animation: dog_cloud 45s linear 5s infinite;
 	  -webkit-animation: dog_cloud 45s linear 5s infinite;
 	  z-index: -12;
+	}
+	#grass{
+		height: 3rem;
+	}
+
+	#dog_run_ball_frame12{
+		bottom: 3rem;
 	}
 }
