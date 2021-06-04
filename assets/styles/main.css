@@ -196,7 +196,7 @@ h1{
 	height: 40vh;
 	object-fit: contain;
 	object-position: top left;
-  top: var(--margin/2);
+  top: calc(var(--margin)/2);
   left: var(--margin);
   transform: rotate(-20deg);
   opacity: 0;
@@ -643,7 +643,7 @@ h1{
 	}
 
 	.dog_run_ball{
-		height: 3vw;
+		height: 2.5vw;
 	}
 
 	html{
