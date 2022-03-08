@@ -171,6 +171,10 @@ input[type='submit']{
 	width:  33.33%;
 }
 
+.commision_details{
+	list-style: none;
+}
+
 .commision_example video{
 	width:  70%;
 	margin: 0 15%;
