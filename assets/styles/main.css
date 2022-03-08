@@ -45,7 +45,7 @@ body{
 .important_text{
 	background-color: #ffe422;
 	border-radius: 2rem;
-	padding: 1rem 0;
+	padding: 1rem 0.5rem;
 }
 
 body:after{
