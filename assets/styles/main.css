@@ -32,6 +32,18 @@ html{
 	background-color: #84bbff;
 }
 
+.links{
+	position: fixed;
+	top:  2rem;
+	right:  2rem;
+}
+
+.links a{
+	background-color: #ffe422;
+	padding: 0.25rem;
+	border-radius: 0.5rem;
+}
+
 body{
 	margin: 0 0.5rem;
 	font-family: 'Comic Neue', sans-serif;
@@ -197,10 +209,6 @@ h1{
 	text-align: center;
 }
 
-#background_container img{
-	position: fixed;
-}
-
 #logo{
 	bottom: 0.5rem;
 	left: 50%;
@@ -227,6 +235,7 @@ h1{
 }
 
 .sun{
+	position: fixed;
 	width: 18rem;
 	height: 40vh;
 	object-fit: contain;
@@ -253,6 +262,7 @@ h1{
 }
 
 .cloud{
+	position: absolute;
 	filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0,0,0,0.1));
 	opacity: 0.9rem;
 }
@@ -260,7 +270,7 @@ h1{
 #cloud1{
 	right: 24vh;
 	width: 24vh;
-	top: 40vh;
+	top: 40%;
 	/*animation: dog_cloud 30s linear 4s infinite;
   -webkit-animation: dog_cloud 30s linear 4s infinite;*/
 }
@@ -268,32 +278,32 @@ h1{
 #cloud2{
 	right: 20vh;
 	width: 20vh;
-	top: 4vh;/*
+	top: 4%;/*
 	animation: dog_cloud 41s linear 0s infinite;
   -webkit-animation: dog_cloud 41s linear 0s infinite;*/
 }
 
 #dog_cloud1 {
-	right: 32vh;
+	right: 50vh;
 	width: 32vh;
-  top: 5vh;/*
+  top: 5%;/*
   animation: dog_cloud 50s linear 10s infinite;
   -webkit-animation: dog_cloud 50s linear 10s infinite;*/
 }
 
 #dog_cloud2{
-	right: 28vh;
+	left: 28vh;
 	width: 28vh;
-	top: 45vh;/*
+	top: 45%;/*
   animation: dog_cloud 38s linear 8s infinite;
   -webkit-animation: dog_cloud 38s linear 8s infinite;*/
   z-index: -12;
 }
 
 #dog_cloud3{
-	right: -20vh;
+	left: 20vh;
 	width: 20vh;
-	top: 20vh;/*
+	top: 20%;/*
   animation: dog_cloud 45s linear 5s infinite;
   -webkit-animation: dog_cloud 45s linear 5s infinite;*/
   z-index: -12;
