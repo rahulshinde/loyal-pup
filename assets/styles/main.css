@@ -234,15 +234,16 @@ h1{
   top: calc(var(--margin)/2);
   left: var(--margin);
   transform: rotate(-20deg);
-  opacity: 0;
+  opacity: 0;/*
   animation: sun;
   animation-duration: 2s;
   animation-direction: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
   z-index: -15;
 }
 
 #sun2{
+	opacity: 1;
 	animation-delay: 1s;
 }
 
@@ -257,44 +258,44 @@ h1{
 }
 
 #cloud1{
-	right: -24vh;
+	right: 24vh;
 	width: 24vh;
 	top: 40vh;
-	animation: dog_cloud 30s linear 4s infinite;
-  -webkit-animation: dog_cloud 30s linear 4s infinite;
+	/*animation: dog_cloud 30s linear 4s infinite;
+  -webkit-animation: dog_cloud 30s linear 4s infinite;*/
 }
 
 #cloud2{
-	right: -20vh;
+	right: 20vh;
 	width: 20vh;
-	top: 4vh;
+	top: 4vh;/*
 	animation: dog_cloud 41s linear 0s infinite;
-  -webkit-animation: dog_cloud 41s linear 0s infinite;
+  -webkit-animation: dog_cloud 41s linear 0s infinite;*/
 }
 
 #dog_cloud1 {
-	right: -32vh;
+	right: 32vh;
 	width: 32vh;
-  top: 5vh;
+  top: 5vh;/*
   animation: dog_cloud 50s linear 10s infinite;
-  -webkit-animation: dog_cloud 50s linear 10s infinite;
+  -webkit-animation: dog_cloud 50s linear 10s infinite;*/
 }
 
 #dog_cloud2{
-	right: -28vh;
+	right: 28vh;
 	width: 28vh;
-	top: 45vh;
+	top: 45vh;/*
   animation: dog_cloud 38s linear 8s infinite;
-  -webkit-animation: dog_cloud 38s linear 8s infinite;
+  -webkit-animation: dog_cloud 38s linear 8s infinite;*/
   z-index: -12;
 }
 
 #dog_cloud3{
 	right: -20vh;
 	width: 20vh;
-	top: 20vh;
+	top: 20vh;/*
   animation: dog_cloud 45s linear 5s infinite;
-  -webkit-animation: dog_cloud 45s linear 5s infinite;
+  -webkit-animation: dog_cloud 45s linear 5s infinite;*/
   z-index: -12;
 }
 
